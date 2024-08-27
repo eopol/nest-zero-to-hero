@@ -1,9 +1,9 @@
 #################### Usual ####################
 
 # Compiled output
-/dist
-/node_modules
-/build
+dist
+node_modules
+build
 
 # Logs
 logs
@@ -54,6 +54,7 @@ lerna-debug.log*
 .eslintcache
 .shadowenv.d
 .cache
+
 #################### Usual ####################
 
 #################### Node ####################
@@ -72,5 +73,4 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 #################### Repo ####################
 .pnpm-store
 pnpm-lock.yaml
-apps/document/.vitepress/cache
 #################### Repo ####################
