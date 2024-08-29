@@ -1,0 +1,20 @@
+{
+  "extends": ["./tsconfig.paths.json"],
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": [
+    "./apps/frontend/**/*",
+    "./apps/frontend/**/*.json",
+    "./apps/frontend/**/typings/**/*",
+    "./apps/frontend/**/*.md"
+  ],
+  "exclude": [
+    "**/__tests__/**/*",
+    "**/tests/**/*",
+    "node_modules",
+    "**/dist",
+    "**/*.md",
+    "**/*.config.*"
+  ]
+}

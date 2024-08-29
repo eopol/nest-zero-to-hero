@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@backend/*": ["./apps/backend/src"],
+      "@document/*": ["./apps/document/src"],
+      "@frontend/*": ["./apps/frontend/src"],
+      "@nest-zero-to-hero/*": ["./packages/*/src"]
+    }
+  }
+}

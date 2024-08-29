@@ -8,13 +8,11 @@
       "outputs": ["dist/**"],
       "dependsOn": ["^build"]
     },
-
-    "build:document": {
+    "build:backend": {
       "outputs": ["dist/**"],
       "dependsOn": ["build"]
     },
-
-    "build:playground": {
+    "build:frontend": {
       "outputs": ["dist/**"],
       "dependsOn": ["build"]
     },
@@ -35,12 +33,11 @@
       "cache": false,
       "outputs": []
     },
-    "lint:prettier": {
+    "lint:eslint": {
       "cache": false,
       "outputs": []
     },
-
-    "format": {
+    "lint:prettier": {
       "cache": false,
       "outputs": []
     },

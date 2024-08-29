@@ -1,15 +1,14 @@
 {
+  "extends": ["./tsconfig.paths.json"],
   "compilerOptions": {
+    "target": "ES2021",
     "module": "commonjs",
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "target": "ES2021",
     "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
@@ -18,5 +17,12 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true
-  }
+  },
+  "include": [
+    "./apps/backend/**/*",
+    "./apps/backend/**/*.json",
+    "./apps/backend/**/typings/**/*",
+    "./apps/backend/**/*.md"
+  ],
+  "exclude": ["**/__tests__/**", "**/tests/**", "node_modules", "**/dist"]
 }

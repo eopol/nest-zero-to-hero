@@ -1,0 +1,22 @@
+{
+  "name": "@nest-zero-to-hero/document",
+  "private": true,
+  "packageManager": "pnpm@9.5.0",
+  "license": "MIT",
+  "author": "i7eo",
+  "scripts": {
+    "build": "tsup",
+    "dev": "DEV=true pnpm build",
+    "test": "vitest",
+    "lint": "run-s \"lint:**\"",
+    "lint:eslint": "TIMING=1 eslint \"./**/*.{js,jsx,ts,tsx,md,json,jsonc}\" --fix",
+    "lint:prettier": "prettier \"*.{js,ts,jsx,tsx,md,json,jsonc}\" --write",
+    "clean": "run-p \"clean:**\"",
+    "clean:cache": "rimraf .turbo && rimraf dist",
+    "clean:deps": "rimraf node_modules"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  }
+}

@@ -3,7 +3,6 @@
   "private": true,
   "packageManager": "pnpm@9.5.0",
   "description": "🚀 A modern high-performance monorepo project with pnpm + turbo + changeset + vite!",
-  "type": "module",
   "keywords": [
     "monorepo",
     "pnpm",
@@ -24,15 +23,16 @@
     "dev:backend": "turbo run dev --filter=\"./apps/backend\"",
     "build": "turbo run build",
     "build:packages": "turbo run build --filter=\"./packages/**\"",
-    "build:frontend": "turbo run build --filter=\"./apps/frontend\"",
     "build:backend": "turbo run build --filter=\"./apps/backend\"",
+    "build:frontend": "turbo run build --filter=\"./apps/frontend\"",
     "test": "turbo run test",
     "clean": "run-s \"clean:**\"",
     "clean:workspace": "turbo run clean",
     "clean:workspace:cache": "turbo run clean:cache",
     "clean:root-cache": "rimraf .turbo && rimraf pnpm-lock.yaml && rimraf node_modules",
     "lint": "turbo run lint",
-    "format": "turbo run lint:prettier",
+    "lint:eslint": "turbo run lint:eslint",
+    "lint:prettier": "turbo run lint:prettier",
     "commit": "czg",
     "changeset:init": "pnpm exec changeset init",
     "prerelease": "tsx ./scripts/changesets/manual-generate-prereleases.cts",
@@ -42,11 +42,19 @@
     "changeset:gen": "changeset"
   },
   "devDependencies": {
+    "@nest-zero-to-hero/metas": "workspace:*",
     "@types/node": "^22.5.0",
+    "@unconfig/changeset-config": "latest",
+    "@unconfig/commitlint-config": "latest",
+    "@unconfig/eslint-config": "0.1.1",
+    "@unconfig/lint-staged-config": "latest",
+    "@unconfig/prettier-config": "latest",
+    "@unconfig/simple-git-hooks-config": "latest",
+    "@unconfig/ts-config": "latest",
     "@vitest/ui": "^2.0.5",
     "npm-run-all2": "^6.2.2",
     "rimraf": "^6.0.1",
-    "tsx": "4.19.0",
+    "tsx": "^4.19.0",
     "turbo": "^2.0.14",
     "typescript": "^5.5.4",
     "vitest": "^2.0.5"
@@ -62,6 +70,12 @@
         "@algolia/client-search",
         "search-insights"
       ]
+    },
+    "overrides": {
+      "prettier": "^2.8.4"
+    },
+    "allowedDeprecatedVersions": {
+      "nestjs-zod": "*"
     }
   }
 }

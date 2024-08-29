@@ -9,8 +9,8 @@
     "dev": "DEV=true pnpm build",
     "test": "vitest",
     "lint": "run-s \"lint:**\"",
-    "lint:eslint": "TIMING=1 eslint \"*.{js,jsx,ts,tsx,md,json,jsonc}\" --fix",
-    "lint:prettier": "prettier --write \"*.{js,ts,jsx,tsx,md,json,jsonc}\"",
+    "lint:eslint": "TIMING=1 eslint \"./**/*.{js,jsx,ts,tsx,md,json,jsonc}\" --fix",
+    "lint:prettier": "prettier \"*.{js,ts,jsx,tsx,md,json,jsonc}\" --write",
     "clean": "run-p \"clean:**\"",
     "clean:cache": "rimraf .turbo && rimraf dist",
     "clean:deps": "rimraf node_modules"

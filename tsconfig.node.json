@@ -1,0 +1,21 @@
+{
+  "extends": ["@unconfig/ts-config/node.json", "./tsconfig.paths.json"],
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "dist"
+  },
+  "include": [
+    "./packages/**/*",
+    "./packages/**/*.json",
+    "./packages/**/typings/**/*",
+    "./scripts/**/*",
+    "**/*.config.*"
+  ],
+  "exclude": [
+    "**/__tests__/**",
+    "**/tests/**",
+    "node_modules",
+    "**/dist",
+    "**/*.md"
+  ]
+}
