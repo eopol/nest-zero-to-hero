@@ -26,8 +26,8 @@ async function bootstrap() {
 
     const logger = new Logger(`🚀 ${name} 🚀`)
     logger.log(`[${prefix + pid}] Server running on ${url}`)
-    // logger.log(`[${prefix + pid}] Trpc: ${url}/api/trpc-playground`);
 
+    // logger.log(`[${prefix + pid}] Trpc: ${url}/api/trpc-playground`);
     // if (isDev) logger.log(`[${prefix + pid}] OpenAPI: ${url}/api-docs`);
   })
 }
