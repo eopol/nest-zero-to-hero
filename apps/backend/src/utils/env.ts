@@ -12,7 +12,7 @@ export const isDev = process.env.NODE_ENV === 'development'
 
 export const isTest = !!process.env.TEST
 
-export const cwd = process.cwd()
+export const cwd = process.cwd() // /nest-zero-to-hero/apps/backend
 
 export const envFilePath = `.env${
   process.env.NODE_ENV === 'development' ? '' : `.${process.env.NODE_ENV}`
