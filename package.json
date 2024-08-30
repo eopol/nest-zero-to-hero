@@ -18,10 +18,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "postinstall": "simple-git-hooks",
-    "dev": "turbo run dev --parallel --continue",
-    "dev:packages": "turbo run dev --filter=\"./packages/**\"",
-    "dev:backend": "turbo run dev --filter=\"./apps/backend\"",
-    "dev:frontend": "turbo run dev --filter=\"./apps/frontend\"",
+    "dev": "turbo run dev",
     "build": "turbo run build",
     "build:packages": "turbo run build --filter=\"./packages/**\"",
     "build:backend": "turbo run build --filter=\"./apps/backend\"",
@@ -76,6 +73,9 @@
       "rimraf": "^6.0.1"
     },
     "allowedDeprecatedVersions": {
+      "@humanwhocodes/config-array": "*",
+      "@humanwhocodes/object-schema": "*",
+      "sourcemap-codec": "*",
       "nestjs-zod": "*"
     }
   }
