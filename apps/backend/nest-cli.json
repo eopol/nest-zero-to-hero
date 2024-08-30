@@ -3,9 +3,9 @@
   "collection": "@nestjs/schematics",
   "sourceRoot": "src",
   "compilerOptions": {
-    "tsConfigPath": "../../tsconfig.app.backend.json",
     "builder": "swc",
     "typeCheck": true,
+    "deleteOutDir": true,
     "plugins": ["@nestjs/swagger"]
   }
 }

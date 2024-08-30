@@ -2,9 +2,10 @@
   "extends": ["@unconfig/ts-config/node.json"],
   "compilerOptions": {
     "composite": true,
+
+    "baseUrl": "./",
     "outDir": "dist"
   },
-  "include": ["./scripts/**/*", "**/*.config.*"],
   "exclude": [
     "**/__tests__/**",
     "**/tests/**",

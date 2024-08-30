@@ -6,14 +6,16 @@
   "author": "i7eo",
   "scripts": {
     "build": "tsup",
-    "dev": "DEV=true pnpm build",
     "test": "vitest",
-    "lint": "run-s \"lint:**\"",
-    "lint:eslint": "TIMING=1 eslint \"./**/*.{js,jsx,ts,tsx,md,json,jsonc}\" --fix",
-    "lint:prettier": "prettier \"*.{js,ts,jsx,tsx,md,json,jsonc}\" --write",
+    "format": "prettier \"./**/*.{js,ts,jsx,tsx,md,json,jsonc}\" --write",
+    "lint": "TIMING=1 eslint \"./**/*.{js,jsx,ts,tsx,md,json,jsonc}\" --fix",
     "clean": "run-p \"clean:**\"",
     "clean:cache": "rimraf .turbo && rimraf dist",
     "clean:deps": "rimraf node_modules"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "typescript": "^5.5.4"
   },
   "engines": {
     "node": ">=20",

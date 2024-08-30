@@ -7,14 +7,19 @@ export default defineConfig({
   // splitting: true,
   cjsInterop: true,
   watch: !!process.env.DEV,
-  dts: process.env.DEV
-    ? false
-    : {
-        compilerOptions: {
-          composite: false,
-        },
-      },
-  tsconfig: '../../tsconfig.node.json',
+  // dts: process.env.DEV
+  //   ? false
+  //   : {
+  //       compilerOptions: {
+  //         composite: false,
+  //       },
+  //     },
+  dts: {
+    compilerOptions: {
+      composite: false,
+    },
+  },
+  tsconfig: './tsconfig.json',
   clean: true,
   shims: true,
   define: {

@@ -19,8 +19,9 @@
     "preinstall": "npx only-allow pnpm",
     "postinstall": "simple-git-hooks",
     "dev": "turbo run dev --parallel --continue",
-    "dev:frontend": "turbo run dev --filter=\"./apps/frontend\"",
+    "dev:packages": "turbo run dev --filter=\"./packages/**\"",
     "dev:backend": "turbo run dev --filter=\"./apps/backend\"",
+    "dev:frontend": "turbo run dev --filter=\"./apps/frontend\"",
     "build": "turbo run build",
     "build:packages": "turbo run build --filter=\"./packages/**\"",
     "build:backend": "turbo run build --filter=\"./apps/backend\"",
@@ -30,9 +31,8 @@
     "clean:workspace": "turbo run clean",
     "clean:workspace:cache": "turbo run clean:cache",
     "clean:root-cache": "rimraf .turbo && rimraf pnpm-lock.yaml && rimraf node_modules",
+    "format": "turbo run format",
     "lint": "turbo run lint",
-    "lint:eslint": "turbo run lint:eslint",
-    "lint:prettier": "turbo run lint:prettier",
     "commit": "czg",
     "changeset:init": "pnpm exec changeset init",
     "prerelease": "tsx ./scripts/changesets/manual-generate-prereleases.cts",
@@ -55,7 +55,7 @@
     "npm-run-all2": "^6.2.2",
     "rimraf": "^6.0.1",
     "tsx": "^4.19.0",
-    "turbo": "^2.0.14",
+    "turbo": "^2.1.0",
     "typescript": "^5.5.4",
     "vitest": "^2.0.5"
   },
@@ -72,7 +72,8 @@
       ]
     },
     "overrides": {
-      "prettier": "^2.8.4"
+      "prettier": "^2.8.4",
+      "rimraf": "^6.0.1"
     },
     "allowedDeprecatedVersions": {
       "nestjs-zod": "*"

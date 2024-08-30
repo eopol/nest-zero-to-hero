@@ -1,4 +1,5 @@
-import { type Recordable } from '@nest-zero-to-hero/utils'
+/* eslint-disable @typescript-eslint/consistent-type-imports */
+import { Recordable } from '@nest-zero-to-hero/utils'
 import { Module } from '@nestjs/common'
 import { ConfigModule } from '@nestjs/config'
 import { envFilePath, loadEnvFile } from './utils'
@@ -12,7 +13,11 @@ import { configSchema } from './configs'
       isGlobal: true,
       envFilePath,
       load: [() => loadEnvFile(envFilePath)],
-      validate: (config: Recordable) => configSchema.parse(config),
+      validate: (config: Recordable) => {
+        const result = configSchema.parse(config)
+        console.log('🚀 ~ result:', result)
+        return result
+      },
     }),
   ],
   controllers: [AppController],

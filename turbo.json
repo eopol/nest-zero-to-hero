@@ -25,19 +25,13 @@
     "clean": {
       "cache": false
     },
-    "clean:cache": {
-      "cache": false
+
+    "format": {
+      "cache": false,
+      "outputs": []
     },
 
     "lint": {
-      "cache": false,
-      "outputs": []
-    },
-    "lint:eslint": {
-      "cache": false,
-      "outputs": []
-    },
-    "lint:prettier": {
       "cache": false,
       "outputs": []
     },
