@@ -5,6 +5,7 @@ import { envFilePath, loadEnvFile } from './utils'
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
 import { ConfigSchema, configSchema } from './configs'
+import { LoggerModule } from './modules/log/logger.module'
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { ConfigSchema, configSchema } from './configs'
       load: [() => loadEnvFile(envFilePath)],
       validate: (config: ConfigSchema) => configSchema.parse(config),
     }),
+    LoggerModule,
   ],
   controllers: [AppController],
   providers: [AppService],

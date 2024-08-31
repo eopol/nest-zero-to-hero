@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 import cluster from 'node:cluster'
-import { Logger } from '@nestjs/common'
+import { Logger, VersioningType } from '@nestjs/common'
 import { NestFactory } from '@nestjs/core'
 import { ConfigService } from '@nestjs/config'
 import { NestFastifyApplication } from '@nestjs/platform-fastify'
-import { fastifyApp } from './framework/adapters'
+import { fastifyApp } from './shared/adapters'
 import { AppModule } from './app.module'
 import { name } from '../package.json'
 import { isMainProcess } from './utils'
@@ -28,7 +28,10 @@ async function bootstrap() {
     configService.get<ConfigSchema['APP_GLOBAL_PREFIX']>('APP_GLOBAL_PREFIX')!
 
   app.enableCors({ origin: '*', credentials: true })
-  app.setGlobalPrefix(APP_GLOBAL_PREFIX) // TODO: SSR INDEX.HTML
+  app.enableVersioning({ type: VersioningType.URI })
+  app.setGlobalPrefix(APP_GLOBAL_PREFIX, {
+    exclude: ['/'],
+  }) // TODO: SSR INDEX.HTML
   app.useStaticAssets({ root: DEFAULT_PUBLIC_PATH })
 
   // isDev && app.useGlobalInterceptors(new LoggingInterceptor())
