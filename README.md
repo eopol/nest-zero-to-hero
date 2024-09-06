@@ -1,5 +1,26 @@
-# `@nest-zero-to-hero`
+# `@nest-zero-to-hero/repository`
 
-## Dep Tips
+// TODO: Description
 
-1. Use `@unconfig/eslint-config@0.1.1` for `eslint@8.x` and `nestjs`
+## Table Of Contents
+
+- [Apps document](#apps-document)
+- [Packages document](#packages-document)
+- [Development document](#development-document)
+- [License](#license)
+
+## Apps document
+
+Please see [here](./docs/apps/index.md).
+
+## Packages document
+
+Please see [here](./docs/packages/index.md).
+
+## Development document
+
+Please see [here](./docs/development/index.md).
+
+## License
+
+This repository is published under the [MIT](./LICENSE) license.
