@@ -6,6 +6,12 @@
     "baseUrl": "./",
     "outDir": "dist"
   },
+  "include": [
+    "./src/**/*",
+    "./**/*.json",
+    "./**/typings/**/*",
+    "./scripts/**/*"
+  ],
   "exclude": [
     "**/__tests__/**",
     "**/tests/**",
