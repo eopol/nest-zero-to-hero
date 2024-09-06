@@ -6,7 +6,7 @@ section: 'introduction'
 
 <!-- markdownlint-disable MD025 -->
 
-# `@nest-zero-to-hero/*` 变更记录总览
+# `@nest-zero-to-hero/*` changelogs
 
 <!-- markdownlint-enable MD025 -->
 
