@@ -2,6 +2,8 @@ const fs = require('node:fs')
 const path = require('node:path')
 const _config = require('@unconfig/commitlint-config').all
 
+const headerMaxLengthConfig = [..._config.rules['header-max-length']]
+headerMaxLengthConfig.pop()
 const excludeFileNames = ['.DS_Store', 'README.md']
 
 function createScopes() {
@@ -39,5 +41,6 @@ module.exports = {
   rules: {
     ..._config.rules,
     'scope-enum': [2, 'always', createScopes()],
+    "header-max-length": [...headerMaxLengthConfig, 128]
   },
 }
