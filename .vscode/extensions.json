@@ -9,15 +9,11 @@
     "usernamehw.errorlens",
     "dbaeumer.vscode-eslint",
     "eamodio.gitlens",
-    "kisstkondoros.vscode-gutter-preview",
     "wix.vscode-import-cost",
     "DavidAnson.vscode-markdownlint",
     "leizongmin.node-module-intellisense",
     "christian-kohler.path-intellisense",
     "esbenp.prettier-vscode",
-    "mohsen1.prettify-json",
-    "stylelint.vscode-stylelint",
-    "SimonSiefke.svg-preview",
     "nojsja.vscode-nvm"
   ]
 }
