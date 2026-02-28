@@ -25,7 +25,7 @@
     "clean:deps": "rimraf node_modules"
   },
   "dependencies": {
-    "@casl/ability": "^6.7.1",
+    "@casl/ability": "^6.7.5",
     "@casl/prisma": "^1.4.1",
     "@fastify/cookie": "^9.4.0",
     "@fastify/multipart": "^8.3.0",
